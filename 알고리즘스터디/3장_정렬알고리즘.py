@@ -56,7 +56,7 @@ for i in range(len(count)):
 '''
 
 # Quiz
-
+'''
 A =[5,3,2,6,1]
 B =[8,1,5,9,4]
 K = 3
@@ -67,5 +67,15 @@ B.sort(reverse=True)
 for i in range(K):
     if A[i] < B[i]:
         A[i], B[i] = B[i], A[i]
+
+print(sum(A))
+'''
+A =[5,3,2,6,1]
+B =[8,1,5,9,4]
+K = 3
+
+for i in range(K):
+    if min(A) < max(B):
+        min(A), max(B) = max(B), min(A)
 
 print(sum(A))

@@ -191,7 +191,7 @@ for i in range(128):
     pip=0
     wp=0
     count+=1
-print(rn, on, vn, gn, sn, pun, pin, wn)
+print('레드:',rn,'주황:', on,'바닐라:', vn,'그린:',gn,'스카이:', sn,'퍼플:', pun,'핑크:', pin,'화이트:', wn)
 ''' 
 // 마지막에 들어갈 내용
 Q1(a_1)

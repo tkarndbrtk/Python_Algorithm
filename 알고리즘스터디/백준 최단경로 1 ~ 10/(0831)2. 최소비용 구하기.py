@@ -22,7 +22,8 @@ def dijkstra(start):
         distance[i[0]] = cost
         heapq.heappush(q, (cost, i[0]))
 
-node_num, line_num, start_node = map(int,input().split())
+node_num = int(input())
+line_num = int(input())
 line_information = [[] for i in range(node_num+1)]
 distance = [INF] * (node_num+1)
 
@@ -30,14 +31,8 @@ for _ in range(line_num):
   from_node, to_node, cost = map(int, input().split())
   line_information[from_node].append((to_node, cost))
 
+
+start_node, end_node = map(int,input().split())
 dijkstra(start_node)
 
-count = 0
-max_distance = 0
-for d in distance:
-  #@ 시작노드에서 해당 노드까지가 연결되어있는지 확인
-  if d != 1e9:
-    count+=1
-  #@ INF를 걸러내기 위한 방법
-    max_distance = max(max_distance, d)
-print(count-1, max_distance)
+print(distance[end_node])
